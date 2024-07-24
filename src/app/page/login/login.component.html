@@ -1,0 +1,56 @@
+<div
+  class="fxLayout font"
+  style="
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: mistyrose;"
+>
+  <mat-card id="rcorners1" style="background-color: whitesmoke;">
+    <mat-card-header>
+      <mat-card-title
+        class="fxLayout font"
+        style="width: 400px; flex-direction: row;
+        justify-content: center;  align-items: center;"
+        align="center"
+      >
+
+      <img src="https://cdn.discordapp.com/attachments/971027615580295220/1085858209237057596/da97209cc59f6c4e.jpg"
+      width="50%"  alt="" id="rcorners1">
+      <br><br>
+      <mat-icon>lock</mat-icon>
+      Login
+      </mat-card-title>
+      <mat-card-subtitle class="font">กรุณาเข้าสู่ระบบก่อนสั่งซื้ออาหาร</mat-card-subtitle>
+    </mat-card-header>
+
+    <div class="fxLayout" style="margin-top: 10px; flex-direction: row; justify-content: center;">
+      <div class="fxLayout" style="flex-direction: column; justify-content: center; width: 400px;">
+
+        <mat-form-field appearance="outline">
+          <mat-label class="font">Email</mat-label>
+          <input #email matInput type="email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="font">Password</mat-label>
+          <input #password matInput type="password" [type]="hide ? 'password' : 'text'"
+          (keydown.enter)="checkLogin(email.value,password.value)"/>
+
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+      </div>
+    </div>
+    <mat-card-actions class="fxLayout" style="flex-direction: row; justify-content: space-between;">
+    <br>
+    <button mat-flat-button color="primary" style="margin: auto;" class="font"
+    (click)="checkLogin(email.value,password.value)">Login</button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>

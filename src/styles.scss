@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.fxLayout {
+  position: relative;
+  display: flex;
+}
+.app-toolbar{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+.font{
+  font-family: 'Mali', cursive;
+}
+.example-tab-icon {
+  margin-right: 8px;
+}
+//------------------------------
+// ----menu------
+.example-card {
+  max-width: 400px;
+}
+// ---List
+// .mat-mdc-form-field + .mat-mdc-form-field {
+//   margin-left: 8px;
+// }
+// --------add
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+td {
+  padding-right: 8px;
+}
+// ---------โค้ง------------
+#rcorners1 {
+  border-radius: 25px;
+}
+#rcorners {
+  border-radius: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}

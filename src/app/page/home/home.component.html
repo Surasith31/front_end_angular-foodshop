@@ -1,0 +1,123 @@
+<html>
+    <mat-toolbar
+      class="fxLayout dark font"
+      style="
+      width: 100%;
+      height: 80px;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: lightsalmon;
+      color: ghostwhite;"
+    >
+      <div class="fxLayout font" style="flex-direction: row; align-items: center;">
+        <img src="https://cdn.discordapp.com/attachments/971027615580295220/1085858209237057596/da97209cc59f6c4e.jpg"
+          height="70" width="70" alt="">
+        <span>&nbsp;Sugar Sugar Food Shop</span>
+      </div>
+      <div >
+        <button mat-flat-button style="background-color: lightsalmon; color: ghostwhite;" class="font">
+          <mat-icon>home</mat-icon>
+          หน้าแรก
+        </button>
+        <button mat-flat-button style="background-color: lightsalmon; color: ghostwhite;" (click)="showabout()" class="font">
+          <mat-icon>face</mat-icon>
+          about us
+        </button>
+        <button mat-flat-button style="background-color: lightsalmon; color: ghostwhite;" (click)="showlogin()" class="font">
+          <mat-icon>https</mat-icon>
+          Login
+        </button>
+      </div>
+    </mat-toolbar>
+
+  <body>
+
+    <div style="background-color: ghostwhite;">
+      <div class="row">
+        <div class="col mx-3 my-3" style="align-self: center;">
+          <img id="rcorners1" src="https://media.tenor.com/ddfzNh7h5RoAAAAC/studio-ghibli.gif" alt="" >
+        </div>
+        <div class="col" style="align-self: center; font-family: 'Times New Roman', Times, serif;" >
+          <p  style="font-size: 38px;"><b class="font">Welcome To Sugar Sugar Food Shop</b></p>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+  <div class="fxLayout" style="flex-direction: row; justify-content: center;">
+    <p style="font-size: 20px;"><b class="font">เมนูแนะนำ</b></p>
+  </div>
+
+  <div style="background-color: ghostwhite; " class="font" align="center">
+    <div class="row">
+      <div class="col font" style="align-self: center;">
+        <mat-card class="mx-1" style="width: 100%;">
+          <mat-card-content>
+            <div style="flex-direction: row; justify-content: start; align-items: center; ">
+              <img  src="https://img.wongnai.com/p/1920x0/2018/02/14/021350fce478468b98c775abd057a3c0.jpg"
+              width="230" height="200" class="zoom">
+              <h5 class="my-3" >ข้าวผัดกุ้ง</h5>
+              <mat-card-subtitle class="font">อาหารจานหลัก</mat-card-subtitle><br>
+              <div class="fxLayout" style="flex-direction: row; justify-content: space-between;">
+                <p>70 Bath</p>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="col font" style="align-self: center;">
+        <mat-card class="mx-1" style="width: 100%;">
+          <mat-card-content>
+            <div style="flex-direction: row; justify-content: start; align-items: center; ">
+              <img src="https://img.wongnai.com/p/1920x0/2021/09/14/680d6726011b40bb9dead5d90055be8c.jpg"
+              width="230" height="200" class="zoom">
+              <h5 class="my-3">ข้าวโพดทอด</h5>
+              <mat-card-subtitle class="font">ของทานเล่น</mat-card-subtitle><br>
+              <div class="fxLayout" style="flex-direction: row; justify-content: space-between;">
+                <p>59 Bath</p>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="col font" style="align-self: center;">
+        <mat-card class="mx-1" style="width: 100%;">
+          <mat-card-content>
+            <div style="flex-direction: row; justify-content: start; align-items: center; ">
+              <img src="https://image.sistacafe.com/images/uploads/summary/image/991/1434532258-Tofu-Pudding-III.jpg"
+              width="230" height="200" class="zoom">
+              <h5 class="my-3">พุดดิ้งสตอเบอรี่</h5>
+              <mat-card-subtitle class="font">ของหวาน</mat-card-subtitle><br>
+              <div class="fxLayout" style="flex-direction: row; justify-content: space-between;">
+                <p>59 Bath</p>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="col font" style="align-self: center;">
+        <mat-card class="mx-1" style="width: 100%;">
+          <mat-card-content>
+            <div style="flex-direction: row; justify-content: start; align-items: center; ">
+              <img src="https://www.cleaneatingkitchen.com/wp-content/uploads/2022/07/espresso-americano-over-ice-with-straw.jpg"
+              width="230" height="200" class="zoom">
+              <h5 class="my-3" >อเมริกาโน่</h5>
+              <mat-card-subtitle class="font">เครื่องดื่ม</mat-card-subtitle><br>
+              <div class="fxLayout" style="flex-direction: row; justify-content: space-between;">
+                <p>99 Bath</p>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

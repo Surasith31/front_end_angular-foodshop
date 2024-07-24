@@ -1,0 +1,11 @@
+.fxLayout {
+  position: relative;
+  display: flex;
+}
+.zoom {
+  border-radius: 10px;
+  transition: transform .4s;
+}
+.zoom:hover {
+  transform: scale(1.09);
+}

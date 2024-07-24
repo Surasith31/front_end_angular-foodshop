@@ -1,0 +1,62 @@
+<mat-toolbar
+      class="fxLayout dark font"
+      style="
+      width: 100%;
+      height: 80px;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: lightsalmon;
+      color: ghostwhite;"
+    >
+      <div class="fxLayout font" style="flex-direction: row; align-items: center;">
+        <img src="https://cdn.discordapp.com/attachments/971027615580295220/1085858209237057596/da97209cc59f6c4e.jpg"
+          height="70" width="70" alt="">
+        <span>&nbsp;Sugar Sugar Food Shop</span>
+      </div>
+      <div>
+        <button mat-flat-button style="background-color: lightsalmon; color: ghostwhite;">
+          <mat-icon>home</mat-icon>
+          หน้าแรก
+        </button>
+        <button mat-flat-button style="background-color: lightsalmon; color: ghostwhite;" (click)="logout()">
+          <mat-icon>power_settings_new</mat-icon>
+          ออกจากระบบ
+        </button>
+      </div>
+    </mat-toolbar>
+
+<div align="center" style="margin-top: 28px; font-size: 18px;">
+  <div class="container mx-2">
+    <div class="row font" >
+      <div class="col">เลขที่สั่งซื้อ</div>
+      <div class="col">ชื่อลูกค้า</div>
+      <div class="col">ที่อยู่ลูกค้า</div>
+      <div class="col">วันที่-เวลา</div>
+      <div class="col">ราคารวม</div>
+      <div class="col">สถานะ</div>
+    </div>
+
+    <div class="row font" *ngFor="let bill of this.bill" style="margin-top: 30px;">
+      <div class="col">{{bill.id_bill}}</div>
+      <div class="col">{{bill.name}}</div>
+      <div class="col">{{bill.address}}</div>
+      <div class="col">{{bill.date}}</div>
+      <div class="col">{{bill.total}}</div>
+      <div class="col">
+
+        <select *ngIf="this.bill.status == 0; else show"
+          #n (change)="status(bill.id_bill , bill.id_cus , n.value)">
+          <option value="0" selected>ยังไม่จัดส่ง</option>
+          <option value="1">จัดส่งแล้ว</option>
+        </select>
+      </div>
+
+      <ng-template #show>
+        <select #n (change)="status(bill.id_bill , bill.id_cus , n.value)">
+          <option value="1" selected>จัดส่งแล้ว</option>
+          <option value="0">ยังไม่จัดส่ง</option>
+        </select>
+      </ng-template>
+    </div>
+  </div>
+</div>

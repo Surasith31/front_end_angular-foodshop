@@ -1,0 +1,12 @@
+<div style=" display: flex; flex-direction: column; height: 200px; width: 300px; margin: 20px; border-radius: 50px; align-items: center;">
+  <br><h1>เปลี่ยนจำนวน</h1>
+
+  <div class="wrapper" >
+    <span class="minus" (click)="counter('minus')">-</span>
+    <span class="minus" >{{value}}</span>
+    <span class="plus" (click)="counter('plus')">+</span>
+  </div>
+
+  <button  mat-button color="private" style="width: 30%; margin: 10px;"  (click)="confirm()">ยืนยัน</button>
+  <button mat-button color="private" style="width: 30%; margin: 10px;"  (click)="close()">ปิด</button>
+</div>
